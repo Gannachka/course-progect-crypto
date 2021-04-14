@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseProgect"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="755" Width="1453">
+    <Grid Background="BlueViolet">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="174*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="184*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="290.6*"/>
+            <ColumnDefinition Width="290.6*"/>
+            <ColumnDefinition Width="290.6*"/>
+            <ColumnDefinition Width="290.6*"/>
+            <ColumnDefinition Width="290.6*"/>
 
+        </Grid.ColumnDefinitions>
+        <Button Content="Выполнить" FontFamily="Californian FB" FontWeight="Bold" FontSize="25" Foreground="LightBlue" Background="DarkSlateBlue" HorizontalAlignment="Center" VerticalAlignment="Center" Height="57" Width="291" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Left" Background="AliceBlue" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Height="141" Width="271" Margin="11,0,0,0"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Margin="0,16,0,0" Grid.Row="5" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="271" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Height="141" Width="271" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Margin="0,16,0,0" Grid.Row="5" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="271" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Margin="0,16,0,0" Grid.Row="5" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="271" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Margin="0,16,0,0" Grid.Row="5" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="271" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Margin="0,16,0,0" Grid.Row="5" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="271"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Height="141" Width="271" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Height="141" Width="271" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Center" Background="AliceBlue" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Height="141" Width="271" Grid.Column="1"/>
+        <Label Content="RSA" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" Margin="91,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="35" FontWeight="Bold"/>
+        <Label Content="авв" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" Grid.Row="1" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Grid.Column="4"/>
+        <Label Content="Укладка рюкзака" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" Grid.Row="1" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Grid.Column="3"/>
+        <Label Content="Diffie-Hellman" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" Grid.Row="1" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Grid.Column="2"/>
+        <Label Content="Эль-Гамаля" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" Grid.Row="1" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Grid.Column="1"/>
+        <Button Content="Выполнить" FontFamily="Californian FB" FontWeight="Bold" FontSize="25" Foreground="LightBlue" Background="DarkSlateBlue" HorizontalAlignment="Center" VerticalAlignment="Center" Height="57" Width="291" Grid.Column="2"/>
+        <Button Content="Выполнить" FontFamily="Californian FB" FontWeight="Bold" FontSize="25" Foreground="LightBlue" Background="DarkSlateBlue" HorizontalAlignment="Center" VerticalAlignment="Center" Height="57" Width="291" Grid.Column="2"/>
+        <Button Content="Выполнить" FontFamily="Californian FB" FontWeight="Bold" FontSize="25" Foreground="LightBlue" Background="DarkSlateBlue" HorizontalAlignment="Center" VerticalAlignment="Center" Height="57" Width="291" Grid.Column="2"/>
     </Grid>
 </Window>
