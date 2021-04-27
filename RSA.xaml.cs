@@ -19,7 +19,7 @@ namespace CourseProgect
     /// </summary>
     public partial class RSA : Window
     {
-        public Stopwatch time = new Stopwatch();
+        public static Stopwatch time = new Stopwatch();
         public RSAClass rsa = new RSAClass();
         public RSA()
         {

@@ -13,21 +13,21 @@
             <ColumnDefinition Width="370*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="139*"/>
-            <RowDefinition Height="53*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="157*"/>
             <RowDefinition Height="86*"/>
             <RowDefinition Height="34*"/>
             <RowDefinition Height="38*"/>
             <RowDefinition Height="77*"/>
         </Grid.RowDefinitions>
-        <Button Background="Indigo" Content="Encrypt" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="5"/>
-        <Button Background="Indigo" Content="Decrypt" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="5"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="139"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="139" Margin="10,0,0,0"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="32,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="230,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+        <Button x:Name="encodingButton" Background="Indigo" Content="Encrypt" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="4" Click="Button_Click"/>
+        <Button x:Name="decodingButton" Background="Indigo" Content="Decrypt" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="4" Click="decodingButton_Click"/>
+        <TextBox x:Name="encodingMessege" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="140"/>
+        <TextBox x:Name="decodingMessege" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="140"/>
+        <TextBox x:Name="encodingTime" Grid.Column="1" HorizontalAlignment="Left" Margin="32,0,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+        <TextBox x:Name="decodingTime" Grid.Column="2" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+        <TextBox x:Name="hz" Grid.Column="1" HorizontalAlignment="Left" Margin="230,0,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+        <TextBox x:Name="inputMessage" Grid.Column="1" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="60" Margin="10,0,0,0"/>
 
     </Grid>
 </Window>

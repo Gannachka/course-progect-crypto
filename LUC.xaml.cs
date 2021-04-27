@@ -15,7 +15,7 @@ namespace CourseProgect
     /// <summary>
     /// Логика взаимодействия для Deffi.xaml
     /// </summary>
-    public partial class Deffi : Window
+    public partial class Deffi  //: Window
     {
         public Deffi()
         {

@@ -7,27 +7,17 @@
         mc:Ignorable="d"
         Title="Deffi" Height="450" Width="800">
     <Grid Background="BlueViolet" Height="472" VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="89*"/>
-            <ColumnDefinition Width="341*"/>
-            <ColumnDefinition Width="370*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="139*"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="86*"/>
-            <RowDefinition Height="34*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="77*"/>
-        </Grid.RowDefinitions>
-        <Button Background="Indigo" Content="Encrypt" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="5"/>
-        <Button Background="Indigo" Content="Decrypt" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="5"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="139"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="139" Margin="10,0,0,0"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="32,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="230,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
-
+        <TextBox x:Name="source" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315" Margin="45,72,0,0" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="keyQ" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315" Margin="45,205,0,0" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="keyP" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315" IsReadOnly="True" Margin="45,272,0,0" VerticalContentAlignment="Center"/>
+        <Button x:Name="encrypt" Content="Sign" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Height="25" Margin="0,137,608,0" />
+        <Button x:Name="decrypt" Content="Decrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="229,137,0,0"/>
+        <Label Content="Input the source text:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,46,0,0"/>
+        <Label Content="The open key Q" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,180,0,0"/>
+        <Label Content="The open key P" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,246,0,0"/>
+        <TextBox x:Name="decryptMessege" HorizontalAlignment="Left" Height="101" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315" Margin="400,259,0,0" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="encryptMessage" HorizontalAlignment="Left" Height="104" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315" Margin="397,72,0,0" VerticalContentAlignment="Center"/>
+        <Label Content="The signature R:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.635,0.41" Margin="400,41,0,0"/>
+        <Label Content="The signature S:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="401,233,0,0"/>
     </Grid>
 </Window>
