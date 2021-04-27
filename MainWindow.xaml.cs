@@ -24,5 +24,29 @@ namespace CourseProgect
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RSA rsa = new RSA();
+            rsa.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AlGamal alGamal = new AlGamal();
+            alGamal.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            DSA dsa = new DSA();
+            dsa.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Deffi deffi = new Deffi();
+            deffi.Show();
+        }
     }
 }

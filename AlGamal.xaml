@@ -1,0 +1,33 @@
+﻿<Window x:Class="CourseProgect.AlGamal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseProgect"
+        mc:Ignorable="d"
+        Title="AlGamal" Height="450" Width="800">
+    <Grid Background="BlueViolet" Height="472" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="341*"/>
+            <ColumnDefinition Width="370*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <Button Background="Indigo" Content="Encrypt" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="5"/>
+        <Button Background="Indigo" Content="Decrypt" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="5"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="139"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="139" Margin="10,0,0,0"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="32,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="230,0,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
+
+    </Grid>
+</Window>
