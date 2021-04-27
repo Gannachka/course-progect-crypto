@@ -1,7 +1,9 @@
 ﻿using CourseProgect.Algoritms;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,7 +34,7 @@ namespace CourseProgect
             time.Start();
             a = inputMessege.Text;
             inputMessege.Text = outPutEncrypt.Text;
-            
+            outPutEncrypt.Text = RSAClass.DecryptMessage();
             time.Stop();
             //DecryptTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
             time.Reset();
@@ -45,6 +47,13 @@ namespace CourseProgect
             time.Stop();
             //EncryptTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
             time.Reset();
+        }
+
+        private void browseButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+                inputMessege.Text = File.ReadAllText(openFileDialog.FileName, Encoding.Default);
         }
     }
 }

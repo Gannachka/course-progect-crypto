@@ -1,6 +1,8 @@
 ﻿using CourseProgect.Algoritms.DSA;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,15 +25,21 @@ namespace CourseProgect
             InitializeComponent();
         }
 
+        int q;
+        int p;
+        int g;
+        int x;
+        int y;
+
         private void encrypt_Click(object sender, RoutedEventArgs e)
         {
 
             Keys key = new Keys();
-            int q = key.GenerateQ();
-            int p = key.GenerateP(q);
-            int g = key.GenerateG(q, p);
-            int x = key.GenerateX(q);
-            int y = key.FastExponentiation(p, g, x);
+             q = key.GenerateQ();
+             p = key.GenerateP(q);
+             g = key.GenerateG(q, p);
+             x = key.GenerateX(q);
+             y = key.FastExponentiation(p, g, x);
 
             cipher_r.Text = "";
             cipher_s.Text = "";
@@ -45,17 +53,14 @@ namespace CourseProgect
             cipher_r.Text += Convert.ToString(res[0]);
             cipher_s.Text += Convert.ToString(res[1]);
 
-            keyP.Text = Convert.ToString(p);
-            keyQ.Text = Convert.ToString(q);
-            keyY.Text = Convert.ToString(y);
-            keyX.Text = Convert.ToString(x);
+            
         }
 
         private void decrypt_Click(object sender, RoutedEventArgs e)
         {
-            int q = Convert.ToInt32(keyQ.Text);
-            int p = Convert.ToInt32(keyP.Text);
-            int y = Convert.ToInt32(keyY.Text);
+            int Q = Convert.ToInt32(q);
+            int P = Convert.ToInt32(p);
+            int Y = Convert.ToInt32(y);
 
             int r = Convert.ToInt32(textR.Text);
             int s = Convert.ToInt32(textS.Text);
@@ -66,9 +71,9 @@ namespace CourseProgect
             string src = source.Text;
 
             DSAClass dsa = new DSAClass();
-            if (dsa.CheckingSignature(q, p, r, y, g, s, src))
+            if (dsa.CheckingSignature(Q, P, r, Y, g, s, src)&& src==inputLine.Text)
             {
-                cipher.Text = "The signature is correct";
+                cipher.Text = source.Text + " " + r + ", " + s;
             }
             else
             {
@@ -76,9 +81,11 @@ namespace CourseProgect
             }
         }
 
-        private bool CheckingSignature(int q, int p, int r, int y, int g, int s, string src)
+        private void browseButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+                source.Text = File.ReadAllText(openFileDialog.FileName, Encoding.Default);
         }
     }
 }

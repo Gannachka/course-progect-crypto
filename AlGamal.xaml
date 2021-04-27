@@ -20,13 +20,14 @@
             <RowDefinition Height="38*"/>
             <RowDefinition Height="77*"/>
         </Grid.RowDefinitions>
+        <Button Content="Browse" Name="browseButton" HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Center" Width="85" Click="browseButton_Click" Grid.Column="2" Height="34"/>
+
         <Button x:Name="encodingButton" Background="Indigo" Content="Encrypt" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="4" Click="Button_Click"/>
         <Button x:Name="decodingButton" Background="Indigo" Content="Decrypt" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="4" Click="decodingButton_Click"/>
         <TextBox x:Name="encodingMessege" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="140"/>
         <TextBox x:Name="decodingMessege" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="140"/>
         <TextBox x:Name="encodingTime" Grid.Column="1" HorizontalAlignment="Left" Margin="32,0,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
         <TextBox x:Name="decodingTime" Grid.Column="2" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
-        <TextBox x:Name="hz" Grid.Column="1" HorizontalAlignment="Left" Margin="230,0,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" Height="34"/>
         <TextBox x:Name="inputMessage" Grid.Column="1" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="60" Margin="10,0,0,0"/>
 
     </Grid>

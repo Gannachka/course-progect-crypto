@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="RSA" Height="478" Width="800">
     <Grid Background="BlueViolet" Height="462" VerticalAlignment="Top">
-        <Button Content="Browse" Name="browseButton" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Browse" Name="browseButton" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" Width="75" Click="browseButton_Click"/>
         <Button Content="Encrypt" Name="encryptButton" HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top" Width="75" Click="encryptButton_Click"/>
         <Button Content="Decrypt" Name="decryptButton" HorizontalAlignment="Left" Margin="350,10,0,0" VerticalAlignment="Top" Width="75" Click="decryptButton_Click"/>
         <Label Content="Original Text" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.388,2.446"/>

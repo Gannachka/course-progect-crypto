@@ -265,23 +265,22 @@ namespace CourseProgect.Algoritms
         //    }
         //}
 
-        public static byte[] crypted;
+        static RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(512);
+        static UnicodeEncoding Encoding = new UnicodeEncoding();
+        static byte[] plaintext;
+        static byte[] encryptedtext;
+
         public static string EncryptMessage(string inputValue)
         {
-            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
-            byte[] text = Encoding.UTF8.GetBytes(inputValue);
-            crypted = Encryption(text, RSA.ExportParameters(false), false);
-            string cryptedText = Convert.ToBase64String(crypted);
-
-            return cryptedText;
+            plaintext = Encoding.GetBytes(inputValue);
+            encryptedtext = Encryption(plaintext, RSA.ExportParameters(false), false);
+            return Encoding.GetString(encryptedtext);
         }
 
         public static string DecryptMessage()
         {
-            RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
-            string deCryptedText = Decryption(crypted, RSA.ExportParameters(true), false);
-            RSA.ExportRSAPublicKey().ToString();
-            return deCryptedText;
+            byte[] decryptedtex = Decryption(encryptedtext, RSA.ExportParameters(true), false);
+            return Encoding.GetString(decryptedtex);
         }
 
         static public byte[] Encryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
@@ -289,7 +288,7 @@ namespace CourseProgect.Algoritms
             try
             {
                 byte[] encryptedData;
-                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(512))
+                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
                 {
                     RSA.ImportParameters(RSAKey);
                     encryptedData = RSA.Encrypt(Data, DoOAEPPadding);
@@ -303,18 +302,18 @@ namespace CourseProgect.Algoritms
             }
         }
 
-        static public string Decryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
+        static public byte[] Decryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
         {
 
             try
             {
                 byte[] decryptedData;
-                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(512))
+                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
                 {
                     RSA.ImportParameters(RSAKey);
                     decryptedData = RSA.Decrypt(Data, DoOAEPPadding);
                 }
-                return Encoding.UTF8.GetString(decryptedData);
+                return decryptedData;
             }
             catch (CryptographicException e)
             {

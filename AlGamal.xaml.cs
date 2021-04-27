@@ -1,7 +1,9 @@
 ﻿using CourseProgect.Algoritms.Al_Gamal;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -47,6 +49,13 @@ namespace CourseProgect
 
             decodingTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
 
+        }
+
+        private void browseButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+                inputMessage.Text = File.ReadAllText(openFileDialog.FileName, Encoding.Default);
         }
     }
 }
