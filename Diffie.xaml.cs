@@ -38,7 +38,7 @@ namespace CourseProgect
         private void encryptButton_Click(object sender, RoutedEventArgs e)
         {
             time.Start();
-            outPutEncrypt.Text =diffieHellmanEncryption.Encrypt(inputMessege.Text);
+            outPutEncrypt.Text = diffieHellmanEncryption.Encrypt(inputMessege.Text);
             time.Stop();
             //EncryptTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
             time.Reset();
