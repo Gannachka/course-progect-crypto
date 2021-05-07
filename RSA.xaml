@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="RSA" Height="478" Width="800">
     <Grid Background="BlueViolet" Height="462" VerticalAlignment="Top">
-        <Button Content="Browse" Name="browseButton" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" Width="75" Click="browseButton_Click"/>
-        <Button Content="Encrypt" Name="encryptButton" HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top" Width="75" Click="encryptButton_Click"/>
-        <Button Content="Decrypt" Name="decryptButton" HorizontalAlignment="Left" Margin="350,10,0,0" VerticalAlignment="Top" Width="75" Click="decryptButton_Click"/>
-        <Label Content="Original Text" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.388,2.446"/>
-        <TextBox Name="inputMessege"  HorizontalAlignment="Left" Height="150" Margin="123,45,0,0" TextWrapping="Wrap" AcceptsReturn="True" Text=""  VerticalAlignment="Top" Width="645"/>
-        <Label Content="Ciphered Text" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="150" Margin="123,217,0,0" TextWrapping="Wrap" AcceptsReturn="True" Text="" Name="outPutEncrypt" VerticalAlignment="Top" Width="645"/>
-        <Label Content="Public Key" HorizontalAlignment="Left" Margin="123,380,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.373,0.549"/>
-        <Label Content="Private Key" HorizontalAlignment="Left" Margin="530,380,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.373,0.549"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="123,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Name="publicKey"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="530,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Name="privateKey"/>
+        <Button Content="Browse" Name="browseButton" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" Width="97" Click="browseButton_Click" Height="46"/>
+        <Button Content="Encrypt" Name="encryptButton" HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top" Width="87" Click="encryptButton_Click" Height="46"/>
+        <Button Content="Decrypt" Name="decryptButton" HorizontalAlignment="Left" Margin="341,10,0,0" VerticalAlignment="Top" Width="82" Click="decryptButton_Click" Height="46"/>
+        <Label Content="Original Text" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.388,2.446"/>
+        <TextBox Name="inputMessege"  HorizontalAlignment="Left" Height="108" Margin="123,70,0,0" TextWrapping="Wrap" AcceptsReturn="True" Text=""  VerticalAlignment="Top" Width="645"/>
+        <Label Content="Ciphered Text" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="106" Margin="123,200,0,0" TextWrapping="Wrap" AcceptsReturn="True" Text="" Name="outPutEncrypt" VerticalAlignment="Top" Width="645"/>
+        <Label Content="Encoding time" HorizontalAlignment="Left" Margin="123,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.373,0.549"/>
+        <Label Content="Decoding time&#xD;&#xA;" HorizontalAlignment="Left" Margin="530,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.373,0.549"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="123,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Name="publicKey"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="530,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Name="privateKey"/>
 
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="29*"/>
