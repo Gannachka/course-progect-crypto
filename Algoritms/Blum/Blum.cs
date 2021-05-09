@@ -22,6 +22,23 @@ namespace CourseProgect.Algoritms.Blum
             XNaut = xNaut;
         }
 
+        public Tuple<List<string>, int> Encrypt(string inputMessege)
+        {
+            byte[] inputMessegeByte = Encoding.Unicode.GetBytes(inputMessege);
+            StringBuilder stringBuilder = new StringBuilder();
+
+
+            foreach (var item in inputMessegeByte)
+            {
+                stringBuilder.Append(Convert.ToString(item, 2));
+            }
+            string inputString = stringBuilder.ToString();
+
+            Tuple<List<string>, int> cyphertext = encrypt(inputString);
+
+            return cyphertext;
+        }
+
         public Tuple<List<string>, int> encrypt(string message)
         {
 

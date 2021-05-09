@@ -48,5 +48,11 @@ namespace CourseProgect
             AlGamal alGamal = new AlGamal();
             alGamal.Show();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Blum blum = new Blum();
+            blum.Show();
+        }
     }
 }
