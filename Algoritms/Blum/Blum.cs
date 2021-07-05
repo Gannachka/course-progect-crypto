@@ -148,5 +148,10 @@ namespace CourseProgect.Algoritms.Blum
             }
             return (int)answer;
         }
+
+        public string decrypt(string temp)
+        {
+            return temp;
+        }
     }
 }

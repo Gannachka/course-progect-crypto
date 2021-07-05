@@ -13,21 +13,24 @@
             <ColumnDefinition Width="370*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="157*"/>
-            <RowDefinition Height="98*"/>
-            <RowDefinition Height="60*"/>
+            <RowDefinition Height="114*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="44*"/>
             <RowDefinition Height="77*"/>
         </Grid.RowDefinitions>
-        <Button Content="Browse" Name="browseButton" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="106" Click="browseButton_Click" Grid.Column="2" Height="40"/>
+        <Button Content="Выбрать" Name="browseButton" Background="Indigo"  FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" FontSize="15" FontWeight="Bold"  VerticalAlignment="Top" Width="106" Click="browseButton_Click" Grid.Column="2" Height="40" Margin="35,53,0,0"/>
 
-        <Button x:Name="encodingButton" Background="Indigo" Content="Encrypt" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="3" Click="Button_Click"/>
-        <Button x:Name="decodingButton" Background="Indigo" Content="Decrypt" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="3" Click="decodingButton_Click"/>
-        <TextBox x:Name="encodingMessege" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" Height="140" Margin="0,16,0,0"/>
-        <TextBox x:Name="decodingMessege" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" Height="140" Margin="10,17,0,0"/>
-        <TextBox x:Name="encodingTime" Grid.Column="1" HorizontalAlignment="Left" Margin="32,26,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="34"/>
-        <TextBox x:Name="decodingTime" Grid.Column="2" HorizontalAlignment="Left" Margin="125,26,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="34"/>
-        <TextBox x:Name="inputMessage" Grid.Column="1" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" Height="60" Margin="0,20,0,0"/>
+        <Button x:Name="encodingButton" Background="Indigo" Content="Шифровать" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="1" Margin="11,0,0,0" Grid.Row="3" Click="Button_Click"/>
+        <Button x:Name="decodingButton" Background="Indigo" Content="Дешифровать" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Center" FontSize="35" FontWeight="Bold" Width="300" Height="58"  Grid.Column="2" Grid.Row="3" Click="decodingButton_Click"/>
+        <TextBox x:Name="encodingMessege" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="331" Height="140"/>
+        <TextBox x:Name="decodingMessege" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1"  TextWrapping="Wrap" VerticalAlignment="Center" Width="330" Height="140"/>
+        <TextBox x:Name="encodingTime" Grid.Column="1" HorizontalAlignment="Left" Margin="75,41,0,0" Grid.Row="2"  TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="34"/>
+        <TextBox x:Name="decodingTime" Grid.Column="2" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="34"/>
+        <TextBox x:Name="inputMessage" Grid.Column="1" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Top" Width="331" Height="60" Margin="0,43,0,0"/>
+        <Label Content="Время шифрования" FontFamily="Californian FB"  HorizontalAlignment="Left" Foreground="LightSkyBlue" VerticalAlignment="Top" FontSize="15" FontWeight="Bold" RenderTransformOrigin="3.373,0.549" Grid.Column="1" Grid.Row="2" Height="26" Width="170" Margin="53,10,0,0"/>
+        <Label Content="Время дешифрования" FontFamily="Californian FB"  HorizontalAlignment="Center" Foreground="LightSkyBlue" VerticalAlignment="Top" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="2" Height="42" Width="186" Margin="0,10,0,0"/>
+        <Label Content="Введите сообщение" FontFamily="Californian FB" Foreground="LightSkyBlue" FontSize="25" FontWeight="Bold" Grid.Column="1" HorizontalAlignment="Left" Margin="11,7,0,0" VerticalAlignment="Top" Height="44" Width="302"/>
 
     </Grid>
 </Window>

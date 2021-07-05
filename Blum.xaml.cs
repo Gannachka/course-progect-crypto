@@ -31,12 +31,22 @@ namespace CourseProgect
         private void encryptButton_Click(object sender, RoutedEventArgs e)
         {
             time.Start();
-            //outPutEncrypt.Text = diffieHellmanEncryption.Encrypt(inputMessege.Text);
-            Tuple<List<string>, int> cyphertext= blum.Encrypt(inputMessege.Text);
-            outPutEncrypt.Text = cyphertext.Item2.ToString();
-            time.Stop();
-            //EncryptTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
-            time.Reset();
+            if (inputMessege.Text != "")
+            {
+                time.Start();
+                Tuple<List<string>, int> cyphertext = blum.Encrypt(inputMessege.Text);
+                for (int i = 0; i < cyphertext.Item1.Count; i++)
+                {
+                    outPutEncrypt.Text += cyphertext.Item1[i].ToString() + " ";
+                }
+                outPutEncrypt.Text += cyphertext.Item2.ToString();
+                time.Stop();
+                privateKey.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
+            }
+            else
+                MessageBox.Show("Введите сообщение");
+                
+           
         }
 
         private void browseButton_Click(object sender, RoutedEventArgs e)
@@ -46,9 +56,29 @@ namespace CourseProgect
                 inputMessege.Text = File.ReadAllText(openFileDialog.FileName, Encoding.Default);
         }
 
+        private void DecryptButton_Click(object sender, RoutedEventArgs e)
+        {           
+                time.Start();
+                string temp = outPutEncrypt.Text;
+                inputMessege.Text = blum.decrypt(temp);
+                inputMessege.Text = temp;
+                publicKey.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
+                time.Reset();          
+          
+        }
+
         private void decryptButton_Click(object sender, RoutedEventArgs e)
         {
-
+        if (outPutEncrypt.Text != "")
+        {
+            time.Start();
+            string temp = outPutEncrypt.Text;
+            decodingMessege.Text = inputMessege.Text;
+            publicKey.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
+            time.Reset();
+            }
+            else
+                MessageBox.Show("Поле для расшифрования пустое");
         }
     }
 }

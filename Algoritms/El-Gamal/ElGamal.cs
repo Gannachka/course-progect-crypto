@@ -49,8 +49,6 @@ namespace CourseProgect.Algoritms.Al_Gamal
             return result;
         }
 
-
-
         private static int Power(int a, int b, int n)
         {
             // a^b mod n

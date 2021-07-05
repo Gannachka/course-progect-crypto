@@ -30,23 +30,31 @@ namespace CourseProgect
 
         private void decryptButton_Click(object sender, RoutedEventArgs e)
         {
-            string a = outPutEncrypt.Text;
-            time.Start();
-            a = inputMessege.Text;
-            inputMessege.Text = outPutEncrypt.Text;
-            outPutEncrypt.Text = RSAClass.DecryptMessage();
-            time.Stop();
-            //DecryptTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
-            time.Reset();
+            if (outPutEncrypt.Text != "")
+            {
+                time.Start();
+                decodingMessege.Text = RSAClass.DecryptMessage();
+                time.Stop();
+                publicKey.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
+                time.Reset();
+            }
+            else
+                MessageBox.Show("Поле пустое");
         }
 
         private void encryptButton_Click(object sender, RoutedEventArgs e)
         {
             time.Start();
-            outPutEncrypt.Text = RSAClass.EncryptMessage(inputMessege.Text);
-            time.Stop();
-            //EncryptTime.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
-            time.Reset();
+            if (inputMessege.Text != "")
+            {
+                outPutEncrypt.Text = RSAClass.EncryptMessage(inputMessege.Text);
+                time.Stop();
+                privateKey.Text = (float)time.ElapsedMilliseconds / 1000 + "sec";
+                time.Reset();
+            }
+            else
+                MessageBox.Show("Введите сообщение");
+           
         }
 
         private void browseButton_Click(object sender, RoutedEventArgs e)

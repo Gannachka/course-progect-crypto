@@ -18,7 +18,7 @@ namespace CourseProgect.Algoritms
         {
             plaintext = Encoding.GetBytes(inputValue);
             encryptedtext = Encryption(plaintext, RSA.ExportParameters(false), false);
-            return Encoding.GetString(encryptedtext);
+            return Convert.ToBase64String(encryptedtext);
         }
 
         public static string DecryptMessage()

@@ -37,12 +37,6 @@ namespace CourseProgect
             deffi.Show();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            DSA dsa = new DSA();
-            dsa.Show();
-        }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             AlGamal alGamal = new AlGamal();
